@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Conclusion Eye Care Limited — Better Vision. Better Life.</title>
+<meta name="description" content="Conclusion Eye Care Limited delivers precise, compassionate and excellent eye care — from comprehensive exams to sight-restoring surgery." />
+<link rel="icon" href="assets/logo.png" type="image/png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: '#5FA47C',
+          deep: '#1F7A63',
+          deepdark: '#15523F',
+          sage: '#DCEFE6',
+          eyeblue: '#3FA9F5',
+          ink: '#333333',
+        },
+        fontFamily: {
+          display: ['Sora', 'sans-serif'],
+          sans: ['Inter', 'sans-serif'],
+        },
+        boxShadow: {
+          soft: '0 10px 30px -12px rgba(31,122,99,0.28)',
+          lift: '0 24px 48px -18px rgba(21,82,63,0.38)',
+          card: '0 16px 36px -16px rgba(31,122,99,0.22)',
+          blue: '0 14px 30px -10px rgba(63,169,245,0.38)',
+        },
+      },
+    },
+  };
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  #about, #services, #ceo, #donate, #experiences, #contact { scroll-margin-top: 5rem; }
+  body { font-family: 'Inter', sans-serif; color: #333333; }
+  h1, h2, h3, .font-display { font-family: 'Sora', sans-serif; }
+
+  .noise {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.35'/></svg>");
+    mix-blend-mode: overlay;
+  }
+
+  .fade-up {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+  .fade-up:nth-child(2) { transition-delay: 0.08s; }
+  .fade-up:nth-child(3) { transition-delay: 0.16s; }
+  .fade-up:nth-child(4) { transition-delay: 0.24s; }
+  .fade-up:nth-child(5) { transition-delay: 0.32s; }
+  .fade-up:nth-child(6) { transition-delay: 0.4s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .fade-up { opacity: 1 !important; transform: none !important; transition: none !important; }
+  }
+
+  #eyeIris {
+    animation: eyeIrisMove 10s cubic-bezier(0.65,0,0.35,1) infinite;
+  }
+  #lidTop { animation: eyeLidTop 10s ease-in-out infinite; }
+  #lidBottom { animation: eyeLidBottom 10s ease-in-out infinite; }
+  #winkSparkle {
+    animation: winkSparkle 10s ease-in-out infinite;
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+
+  @keyframes eyeIrisMove {
+    0%, 14% { transform: translateX(0); }
+    22%, 32% { transform: translateX(-58px); }
+    40%, 50% { transform: translateX(58px); }
+    58%, 100% { transform: translateX(0); }
+  }
+  @keyframes eyeLidTop {
+    0%, 8% { transform: translateY(0); }
+    9.5%, 10.5% { transform: translateY(110px); }
+    12%, 60% { transform: translateY(0); }
+    62%, 70% { transform: translateY(110px); }
+    72%, 100% { transform: translateY(0); }
+  }
+  @keyframes eyeLidBottom {
+    0%, 8% { transform: translateY(0); }
+    9.5%, 10.5% { transform: translateY(-110px); }
+    12%, 60% { transform: translateY(0); }
+    62%, 70% { transform: translateY(-110px); }
+    72%, 100% { transform: translateY(0); }
+  }
+  @keyframes winkSparkle {
+    0%, 71% { opacity: 0; transform: scale(0.6) rotate(0deg); }
+    73% { opacity: 1; transform: scale(1.15) rotate(12deg); }
+    79% { opacity: 0; transform: scale(0.8) rotate(24deg); }
+    100% { opacity: 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #eyeIris, #lidTop, #lidBottom, #winkSparkle { animation: none !important; }
+  }
+
+  .btn-primary {
+    background-color: #5FA47C;
+    color: #ffffff;
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.25s ease, box-shadow 0.25s ease;
+  }
+  .btn-primary:hover { background-color: #1F7A63; transform: translateY(-2px); }
+  .btn-primary:active { transform: scale(0.96); }
+  .btn-primary:focus-visible { outline: 2px solid #3FA9F5; outline-offset: 3px; }
+
+  .btn-outline {
+    border: 1.5px solid #1F7A63;
+    color: #1F7A63;
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.25s ease, color 0.25s ease;
+  }
+  .btn-outline:hover { background-color: #1F7A63; color: #ffffff; transform: translateY(-2px); }
+  .btn-outline:active { transform: scale(0.96); }
+  .btn-outline:focus-visible { outline: 2px solid #3FA9F5; outline-offset: 3px; }
+
+  .btn-white {
+    background-color: #ffffff;
+    color: #1F7A63;
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease;
+  }
+  .btn-white:hover { transform: translateY(-2px); box-shadow: 0 14px 30px -10px rgba(0,0,0,0.25); }
+  .btn-white:active { transform: scale(0.96); }
+  .btn-white:focus-visible { outline: 2px solid #ffffff; outline-offset: 3px; }
+
+  .tap { transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1); }
+  .tap:active { transform: scale(0.93); }
+
+  .card-hover { transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease; }
+  .card-hover:hover { transform: translateY(-6px); }
+
+  .nav-link { position: relative; }
+  .nav-link::after {
+    content: '';
+    position: absolute; left: 0; bottom: -6px;
+    width: 0%; height: 2px; background-color: #5FA47C;
+    transition: width 0.25s ease;
+  }
+  .nav-link:hover::after { width: 100%; }
+
+  .gallery-wrap {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    transition: grid-template-rows 0.7s cubic-bezier(0.65,0,0.35,1), opacity 0.5s ease;
+  }
+  .gallery-wrap.open {
+    grid-template-rows: 1fr;
+    opacity: 1;
+  }
+  .gallery-wrap > div { overflow: hidden; min-height: 0; }
+
+  .modal-backdrop {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  .modal-backdrop.open { opacity: 1; pointer-events: auto; }
+  .modal-panel {
+    transform: scale(0.95) translateY(10px);
+    opacity: 0;
+    transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1), opacity 0.3s ease;
+  }
+  .modal-backdrop.open .modal-panel {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+  .modal-view.hidden { display: none; }
+
+  .mobile-panel {
+    transform: translateY(-8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+  .mobile-panel.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .tile-img { transition: transform 0.5s cubic-bezier(0.34,1.2,0.64,1); }
+  .tile:hover .tile-img { transform: scale(1.06); }
+
+  .floating { animation: floaty 6s ease-in-out infinite; }
+  @keyframes floaty {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+</style>
+</head>
+<body class="bg-white antialiased">
+
+<!-- NAV -->
+<header id="top" class="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-white/85 border-b border-sage">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <img src="assets/logo.png" alt="Conclusion Eye Care Limited logo" class="h-12 w-auto object-contain" />
+      <span class="font-display font-700 leading-tight">
+        <span class="block text-[15px] sm:text-base font-bold text-deep tracking-tight">CONCLUSION</span>
+        <span class="block text-[11px] sm:text-xs font-medium text-primary tracking-[0.18em]">EYE CARE LIMITED</span>
+      </span>
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-9 text-[15px] font-medium text-ink">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#ceo" class="nav-link">CEO's Message</a>
+      <a href="#donate" class="nav-link">Donate</a>
+      <a href="#experiences" class="nav-link">Past Experiences</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a href="#contact" class="hidden sm:inline-flex btn-primary font-medium text-sm px-5 py-2.5 rounded-full shadow-soft">
+        Book Appointment
+      </a>
+      <button id="menuBtn" aria-label="Toggle menu" aria-expanded="false" class="tap lg:hidden p-2 rounded-lg text-deep hover:bg-sage transition">
+        <svg id="iconMenu" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg id="iconClose" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile panel -->
+  <div id="mobilePanel" class="mobile-panel lg:hidden absolute top-20 inset-x-0 bg-white border-b border-sage shadow-lift px-6 py-6 flex flex-col gap-4 text-ink font-medium">
+    <a href="#about" class="py-1.5">About</a>
+    <a href="#services" class="py-1.5">Services</a>
+    <a href="#ceo" class="py-1.5">CEO's Message</a>
+    <a href="#donate" class="py-1.5">Donate</a>
+    <a href="#experiences" class="py-1.5">Past Experiences</a>
+    <a href="#contact" class="py-1.5">Contact</a>
+    <a href="#contact" class="btn-primary text-center font-medium text-sm px-5 py-3 rounded-full shadow-soft mt-1">Book Appointment</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="relative pt-32 sm:pt-40 pb-20 sm:pb-28 overflow-hidden bg-white">
+  <div class="absolute inset-0 -z-10">
+    <div class="absolute -top-32 -right-40 w-[34rem] h-[34rem] rounded-full bg-sage/80 blur-3xl"></div>
+    <div class="absolute top-1/3 -left-32 w-80 h-80 rounded-full bg-eyeblue/10 blur-3xl"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-16 items-center">
+    <div class="fade-up">
+      <span class="inline-flex items-center gap-2 bg-sage text-deep text-xs font-medium tracking-wide px-4 py-2 rounded-full">
+        <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.9 6.1 6.7.9-4.9 4.6 1.3 6.6L12 17l-6 3.2 1.3-6.6-4.9-4.6 6.7-.9z"/></svg>
+        RC: 1957742 — Licensed Eye Care Provider
+      </span>
+
+      <h1 class="font-display font-bold text-[2.6rem] sm:text-5xl lg:text-[3.4rem] leading-[1.08] tracking-[-0.03em] text-ink mt-6">
+        Better Vision.<br />
+        <span class="text-primary">Better Life.</span>
+      </h1>
+
+      <p class="mt-6 text-base sm:text-lg text-ink/70 leading-[1.7] max-w-lg">
+        Conclusion Eye Care Limited delivers exceptional eye care through advanced technology and a patient-centered approach — guided always by precision, compassion and excellence.
+      </p>
+
+      <div class="mt-9 flex flex-wrap gap-4">
+        <a href="#contact" class="btn-primary font-medium px-7 py-3.5 rounded-full shadow-soft">Book an Eye Exam</a>
+        <a href="#experiences" class="btn-outline font-medium px-7 py-3.5 rounded-full">View Past Experiences</a>
+      </div>
+
+      <div class="mt-12 flex flex-wrap gap-x-8 gap-y-4">
+        <div class="flex items-center gap-2.5">
+          <span class="h-9 w-9 rounded-full bg-sage flex items-center justify-center text-deep">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2"/></svg>
+          </span>
+          <span class="text-sm font-medium text-ink/80">Precision</span>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <span class="h-9 w-9 rounded-full bg-sage flex items-center justify-center text-deep">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.6s-7.4-4.6-9.6-9.1C1 8.7 2.4 5.6 5.4 4.8c2-.6 3.8.2 4.9 1.7l1.7 2.2 1.7-2.2c1.1-1.5 2.9-2.3 4.9-1.7 3 .8 4.4 3.9 3 6.7-2.2 4.5-9.6 9.1-9.6 9.1z"/></svg>
+          </span>
+          <span class="text-sm font-medium text-ink/80">Compassion</span>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <span class="h-9 w-9 rounded-full bg-sage flex items-center justify-center text-deep">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.8-4.2 4.1 1 5.8L12 16.9 6.7 19l1-5.8-4.2-4.1 5.9-.8z"/></svg>
+          </span>
+          <span class="text-sm font-medium text-ink/80">Excellence</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative">
+      <div class="relative aspect-[4/5] sm:aspect-square rounded-[2.25rem] bg-gradient-to-br from-deep via-primary to-deepdark overflow-hidden shadow-lift">
+        <div class="absolute inset-0 noise"></div>
+        <div class="absolute -top-10 -left-10 w-56 h-56 rounded-full bg-white/10 blur-2xl"></div>
+        <div class="absolute bottom-0 right-0 w-72 h-72 rounded-full bg-eyeblue/25 blur-3xl"></div>
+
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="bg-white rounded-full p-7 sm:p-9 shadow-lift floating">
+            <img src="assets/logo.png" alt="Conclusion Eye Care emblem" class="h-28 sm:h-36 w-auto object-contain" />
+          </div>
+        </div>
+
+        <div class="absolute left-5 bottom-7 sm:left-8 sm:bottom-10 bg-white/15 backdrop-blur-md border border-white/25 rounded-2xl px-4 py-3 max-w-[12rem]">
+          <p class="text-white text-xs font-medium leading-snug">Patient-centered care with advanced diagnostic technology</p>
+        </div>
+        <div class="absolute right-5 top-7 sm:right-8 sm:top-10 bg-white/15 backdrop-blur-md border border-white/25 rounded-2xl px-4 py-3 flex items-center gap-2">
+          <svg class="h-4 w-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+          <span class="text-white text-xs font-medium">Clear Vision, Always</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3D EYE ANIMATION -->
+<section class="relative py-20 sm:py-28 bg-white overflow-hidden">
+  <div class="max-w-5xl mx-auto px-5 sm:px-8 text-center">
+    <span class="fade-up text-primary font-semibold text-sm tracking-wide uppercase">Precision in Every Glance</span>
+    <h2 class="fade-up font-display font-bold text-3xl sm:text-4xl tracking-[-0.02em] text-ink mt-3">We Notice the Details Others Miss</h2>
+
+    <div class="fade-up relative mt-14 mx-auto w-full max-w-2xl">
+      <div class="relative aspect-[5/3] rounded-[2.5rem] bg-gradient-to-br from-deepdark via-deep to-primary overflow-hidden shadow-lift">
+        <div class="absolute inset-0 noise opacity-30"></div>
+        <div class="absolute -top-16 -left-16 w-72 h-72 rounded-full bg-white/10 blur-3xl"></div>
+        <div class="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-eyeblue/20 blur-3xl"></div>
+
+        <svg id="bigEye" viewBox="0 0 340 200" class="absolute inset-0 w-full h-full p-10 sm:p-16" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <clipPath id="eyeClip">
+              <path d="M10,100 C70,18 270,18 330,100 C270,182 70,182 10,100 Z" />
+            </clipPath>
+            <radialGradient id="scleraGrad" cx="40%" cy="35%" r="75%">
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="100%" stop-color="#dbe7e3"/>
+            </radialGradient>
+            <radialGradient id="irisGrad" cx="38%" cy="35%" r="65%">
+              <stop offset="0%" stop-color="#dcefe6"/>
+              <stop offset="42%" stop-color="#3FA9F5"/>
+              <stop offset="100%" stop-color="#1F7A63"/>
+            </radialGradient>
+            <radialGradient id="pupilGrad" cx="40%" cy="35%" r="70%">
+              <stop offset="0%" stop-color="#2b2b2b"/>
+              <stop offset="100%" stop-color="#050505"/>
+            </radialGradient>
+          </defs>
+
+          <path d="M10,100 C70,18 270,18 330,100 C270,182 70,182 10,100 Z" fill="url(#scleraGrad)" />
+
+          <g clip-path="url(#eyeClip)">
+            <g id="eyeIris">
+              <circle cx="170" cy="100" r="62" fill="url(#irisGrad)" />
+              <circle cx="170" cy="100" r="62" fill="none" stroke="#0c3b2e" stroke-width="2" opacity="0.4"/>
+              <circle cx="170" cy="100" r="30" fill="url(#pupilGrad)" />
+              <circle cx="156" cy="86" r="9" fill="#ffffff" opacity="0.85"/>
+              <circle cx="184" cy="112" r="4" fill="#ffffff" opacity="0.35"/>
+            </g>
+
+            <rect id="lidTop" x="0" y="-110" width="340" height="110" fill="#15523F" />
+            <rect id="lidBottom" x="0" y="200" width="340" height="110" fill="#15523F" />
+          </g>
+
+          <path d="M10,100 C70,18 270,18 330,100 C270,182 70,182 10,100 Z" fill="none" stroke="#ffffff" stroke-opacity="0.5" stroke-width="3" />
+
+          <g id="winkSparkle" opacity="0">
+            <path d="M255 55 l5 -14 l5 14 l14 5 l-14 5 l-5 14 l-5 -14 l-14 -5 Z" fill="#ffffff"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT / PILLARS -->
+<section id="about" class="py-20 sm:py-28 bg-white">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl fade-up">
+      <span class="text-primary font-semibold text-sm tracking-wide uppercase">Our Promise</span>
+      <h2 class="font-display font-bold text-3xl sm:text-4xl tracking-[-0.02em] text-ink mt-3">Why Families Trust Conclusion Eye Care</h2>
+      <p class="mt-5 text-ink/70 leading-[1.7]">
+        Our identity reflects our commitment to providing exceptional eye care through precision, compassion and excellence. We are dedicated to protecting vision and improving quality of life — for every patient, every time.
+      </p>
+    </div>
+
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="card-hover fade-up bg-white border border-sage rounded-2xl p-7 shadow-card">
+        <span class="h-12 w-12 rounded-xl bg-sage text-deep flex items-center justify-center">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/></svg>
+        </span>
+        <h3 class="font-display font-semibold text-lg text-ink mt-5">Precision</h3>
+        <p class="text-sm text-ink/65 mt-2 leading-relaxed">Accurate and reliable eye care, backed by advanced diagnostic technology.</p>
+      </div>
+
+      <div class="card-hover fade-up bg-white border border-sage rounded-2xl p-7 shadow-card">
+        <span class="h-12 w-12 rounded-xl bg-sage text-deep flex items-center justify-center">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.6s-7.4-4.6-9.6-9.1C1 8.7 2.4 5.6 5.4 4.8c2-.6 3.8.2 4.9 1.7l1.7 2.2 1.7-2.2c1.1-1.5 2.9-2.3 4.9-1.7 3 .8 4.4 3.9 3 6.7-2.2 4.5-9.6 9.1-9.6 9.1z"/></svg>
+        </span>
+        <h3 class="font-display font-semibold text-lg text-ink mt-5">Compassion</h3>
+        <p class="text-sm text-ink/65 mt-2 leading-relaxed">Patient-centered care delivered with empathy, dignity and respect.</p>
+      </div>
+
+      <div class="card-hover fade-up bg-white border border-sage rounded-2xl p-7 shadow-card">
+        <span class="h-12 w-12 rounded-xl bg-sage text-deep flex items-center justify-center">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3 5.9.8-4.2 4.1 1 5.8L12 16.9 6.7 19l1-5.8-4.2-4.1 5.9-.8z"/></svg>
+        </span>
+        <h3 class="font-display font-semibold text-lg text-ink mt-5">Excellence</h3>
+        <p class="text-sm text-ink/65 mt-2 leading-relaxed">High standards in every service we deliver, from exam to surgery.</p>
+      </div>
+
+      <div class="card-hover fade-up bg-white border border-sage rounded-2xl p-7 shadow-card">
+        <span class="h-12 w-12 rounded-xl bg-sage text-deep flex items-center justify-center">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="9" r="3"/><circle cx="17" cy="10" r="2.4"/><path d="M2.5 19c.5-3 2.6-5 5.5-5s5 2 5.5 5"/><path d="M14.5 19c.4-2.3 1.9-4 4-4s3.6 1.7 4 4"/></svg>
+        </span>
+        <h3 class="font-display font-semibold text-lg text-ink mt-5">Community</h3>
+        <p class="text-sm text-ink/65 mt-2 leading-relaxed">Committed to building healthier communities through outreach and care.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="py-20 sm:py-28 bg-sage/40">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl fade-up">
+      <span class="text-primary font-semibold text-sm tracking-wide uppercase">What We Offer</span>
+      <h2 class="font-display font-bold text-3xl sm:text-4xl tracking-[-0.02em] text-ink mt-3">Our Services</h2>
+      <p class="mt-5 text-ink/70 leading-[1.7]">Comprehensive eye care services designed around your vision, your comfort, and your life.</p>
+    </div>
+
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <div class="card-hover fade-up bg-white rounded-2xl p-7 shadow-card">
+        <span class="h-12 w-12 rounded-xl bg-deep/10 text-deep flex items-center justify-center">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+        </span>
+        <h3 class="font-display font-semibold text-lg text-ink mt-5">Comprehensive Eye Exams</h3>
+        <p class="text-sm text-ink/65 mt-2 leading-relaxed">Thorough vision and eye-health assessments using modern diagnostic equipment.</p>
+      </div>
+
+      <div class="card-hover fade-up bg-white rounded-2xl p-7 shadow-card">
+        <span class="h-12 w-12 rounded-xl bg-deep/10 text-deep flex items-center justify-center">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="6.5" cy="13" r="3.2"/><circle cx="17.5" cy="13" r="3.2"/><path d="M9.7 12h4.6M3 12.5L1 10M21 10l-2 2.5"/></svg>
+        </span>
+        <h3 class="font-display font-semibold text-lg text-ink mt-5">Glasses &amp; Frames</h3>
+        <p class="text-sm text-ink/65 mt-2 leading-relaxed">A wide selection of prescription glasses and frames fitted to your style.</p>
+      </div>
+
+      <div class="card-hover fade-up bg-white rounded-2xl p-7 shadow-card">
+        <span class="h-12 w-12 rounded-xl bg-deep/10 text-deep flex items-center justify-center">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7.5"/><circle cx="12" cy="12" r="2.6" fill="currentColor"/></svg>
+        </span>
+        <h3 class="font-display font-semibold text-lg text-ink mt-5">Contact Lens Fitting</h3>
+        <p class="text-sm text-ink/65 mt-2 leading-relaxed">Personalized contact lens fittings for comfort, safety and clear sight.</p>
+      </div>
+
+      <div class="card-hover fade-up bg-white rounded-2xl p-7 shadow-card">
+        <span class="h-12 w-12 rounded-xl bg-deep/10 text-deep flex items-center justify-center">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4L9 15"/><path d="M9 15l-2.5 5.5a1 1 0 0 1-1.7.2L3 18l5.5-2.5"/><circle cx="20" cy="4" r="1.4" fill="currentColor"/></svg>
+        </span>
+        <h3 class="font-display font-semibold text-lg text-ink mt-5">Eye Surgery &amp; Surgical Care</h3>
+        <p class="text-sm text-ink/65 mt-2 leading-relaxed">Safe, advanced surgical care including cataract and corrective procedures.</p>
+      </div>
+
+      <div class="card-hover fade-up bg-white rounded-2xl p-7 shadow-card">
+        <span class="h-12 w-12 rounded-xl bg-deep/10 text-deep flex items-center justify-center">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg>
+        </span>
+        <h3 class="font-display font-semibold text-lg text-ink mt-5">Retina &amp; Diabetic Eye Care</h3>
+        <p class="text-sm text-ink/65 mt-2 leading-relaxed">Specialized screening and management for retina health and diabetic eye conditions.</p>
+      </div>
+
+      <div class="card-hover fade-up bg-white rounded-2xl p-7 shadow-card">
+        <span class="h-12 w-12 rounded-xl bg-deep/10 text-deep flex items-center justify-center">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="9" r="3"/><circle cx="17" cy="10" r="2.4"/><path d="M2.5 19c.5-3 2.6-5 5.5-5s5 2 5.5 5"/><path d="M14.5 19c.4-2.3 1.9-4 4-4s3.6 1.7 4 4"/></svg>
+        </span>
+        <h3 class="font-display font-semibold text-lg text-ink mt-5">Community Outreach</h3>
+        <p class="text-sm text-ink/65 mt-2 leading-relaxed">Free and subsidized screening programs bringing eye care to underserved communities.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CEO MESSAGE -->
+<section id="ceo" class="relative py-20 sm:py-28 bg-gradient-to-br from-deepdark via-deep to-deep overflow-hidden">
+  <div class="absolute inset-0 noise opacity-40"></div>
+  <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-primary/20 blur-3xl"></div>
+  <div class="absolute bottom-0 left-0 w-72 h-72 rounded-full bg-eyeblue/15 blur-3xl"></div>
+
+  <div class="relative max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-[0.85fr_1.15fr] gap-14 items-center">
+    <div class="fade-up flex justify-center lg:justify-start">
+      <div class="relative">
+        <div class="absolute -inset-3 rounded-[2rem] bg-white/10 border border-white/20"></div>
+        <div class="relative w-64 sm:w-80 aspect-[3/4] rounded-[1.75rem] overflow-hidden shadow-lift bg-white">
+          <img src="assets/ceo.jpg" alt="Dr. Umar Ahmad Goni, Founder & CEO of Conclusion Eye Care Limited" class="w-full h-full object-cover object-top" />
+        </div>
+        <div class="absolute -bottom-5 left-1/2 -translate-x-1/2 w-[90%] bg-white rounded-xl shadow-lift px-4 py-3 text-center">
+          <p class="font-display font-semibold text-sm text-ink">Dr. Umar Ahmad Goni</p>
+          <p class="text-xs text-primary font-medium mt-0.5">Founder & CEO</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="fade-up text-white">
+      <svg class="h-10 w-10 text-primary/70" viewBox="0 0 24 24" fill="currentColor"><path d="M7.5 6C4.5 7.6 3 10 3 12.8c0 2.6 1.7 4.4 3.9 4.4 1.9 0 3.3-1.4 3.3-3.2 0-1.7-1.2-3-2.8-3-.3 0-.6 0-.8.1.3-1.6 1.6-3.1 3.4-3.9L7.5 6zm9 0c-3 1.6-4.5 4-4.5 6.8 0 2.6 1.7 4.4 3.9 4.4 1.9 0 3.3-1.4 3.3-3.2 0-1.7-1.2-3-2.8-3-.3 0-.6 0-.8.1.3-1.6 1.6-3.1 3.4-3.9L16.5 6z"/></svg>
+
+      <h2 class="font-display font-bold text-3xl sm:text-4xl tracking-[-0.02em] mt-4">A Message from Our CEO</h2>
+
+      <div class="mt-6 space-y-4 text-white/85 leading-[1.75] text-base sm:text-[17px] max-w-xl">
+        <p>Vision is one of life's greatest gifts, and at Conclusion Eye Care, we wake up every day determined to protect it. Our promise is simple: to combine precision, compassion and excellence in every patient we serve — from a child's first eye exam to complex surgical care for our elders.</p>
+        <p>Behind every pair of glasses we fit and every procedure we perform is a person whose story matters to us. That is why we remain committed not only to the patients who walk through our doors, but to the wider communities we serve through our outreach and donation programs.</p>
+        <p>Thank you for trusting us with your sight. We look forward to seeing you soon.</p>
+      </div>
+
+      <div class="mt-7">
+        <p class="font-display font-semibold text-lg">Dr. Umar Ahmad Goni</p>
+        <p class="text-sm text-white/70">Founder & CEO, Conclusion Eye Care Limited</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DONATION -->
+<section id="donate" class="py-20 sm:py-28 bg-white">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="rounded-[2rem] bg-gradient-to-br from-primary to-deep relative overflow-hidden px-7 sm:px-14 py-14 sm:py-16">
+      <div class="absolute inset-0 noise opacity-30"></div>
+      <div class="absolute -bottom-20 -right-10 w-72 h-72 rounded-full bg-white/10 blur-3xl"></div>
+
+      <div class="relative grid lg:grid-cols-[1.2fr_0.8fr] gap-12 items-center">
+        <div class="fade-up text-white">
+          <span class="inline-flex items-center gap-2 bg-white/15 border border-white/25 text-white text-xs font-medium tracking-wide px-4 py-2 rounded-full">
+            <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.6s-7.4-4.6-9.6-9.1C1 8.7 2.4 5.6 5.4 4.8c2-.6 3.8.2 4.9 1.7l1.7 2.2 1.7-2.2c1.1-1.5 2.9-2.3 4.9-1.7 3 .8 4.4 3.9 3 6.7-2.2 4.5-9.6 9.1-9.6 9.1z"/></svg>
+            Give Back
+          </span>
+
+          <h2 class="font-display font-bold text-3xl sm:text-4xl tracking-[-0.02em] mt-5">Give the Gift of Sight</h2>
+
+          <p class="mt-5 text-white/90 leading-[1.75] max-w-xl">
+            Every day, people in our community live with treatable vision loss simply because they cannot afford an eye exam, glasses, or surgery. Through our outreach fund, your donation helps us provide free eye screenings, prescription glasses and sight-restoring surgery to children and families who need it most. No gift is too small — every donation brings someone closer to seeing clearly again.
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-4">
+            <button type="button" id="donateBtn" class="tap btn-white font-medium px-7 py-3.5 rounded-full shadow-soft">Donate Now</button>
+            <a href="#experiences" class="tap inline-flex items-center justify-center gap-2 border border-white/40 text-white font-medium px-7 py-3.5 rounded-full hover:bg-white/10 hover:border-white/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2 transition">Past Outreaches</a>
+            <a href="#contact" class="inline-flex items-center text-white/90 font-medium px-2 py-3.5 hover:text-white transition">Partner With Us →</a>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-4">
+          <div class="fade-up bg-white/12 border border-white/20 backdrop-blur-md rounded-2xl px-5 py-4 flex items-center gap-4">
+            <span class="h-10 w-10 rounded-full bg-white/20 flex items-center justify-center text-white shrink-0">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+            </span>
+            <p class="text-white text-sm font-medium">Free eye screenings for underserved communities</p>
+          </div>
+          <div class="fade-up bg-white/12 border border-white/20 backdrop-blur-md rounded-2xl px-5 py-4 flex items-center gap-4">
+            <span class="h-10 w-10 rounded-full bg-white/20 flex items-center justify-center text-white shrink-0">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6.5" cy="13" r="3.2"/><circle cx="17.5" cy="13" r="3.2"/><path d="M9.7 12h4.6M3 12.5L1 10M21 10l-2 2.5"/></svg>
+            </span>
+            <p class="text-white text-sm font-medium">Glasses provided to children in need</p>
+          </div>
+          <div class="fade-up bg-white/12 border border-white/20 backdrop-blur-md rounded-2xl px-5 py-4 flex items-center gap-4">
+            <span class="h-10 w-10 rounded-full bg-white/20 flex items-center justify-center text-white shrink-0">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4L9 15"/><path d="M9 15l-2.5 5.5a1 1 0 0 1-1.7.2L3 18l5.5-2.5"/><circle cx="20" cy="4" r="1.4" fill="currentColor"/></svg>
+            </span>
+            <p class="text-white text-sm font-medium">Sight-restoring surgery for families who can't afford it</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAST EXPERIENCES -->
+<section id="experiences" class="py-20 sm:py-28 bg-sage/40">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl mx-auto text-center fade-up">
+      <span class="text-primary font-semibold text-sm tracking-wide uppercase">Our Journey</span>
+      <h2 class="font-display font-bold text-3xl sm:text-4xl tracking-[-0.02em] text-ink mt-3">Past Outreaches</h2>
+      <p class="mt-5 text-ink/70 leading-[1.7]">
+        Moments from our outreach programs, community screenings and milestones — a growing gallery of memories from our journey caring for the community.
+      </p>
+      <button id="galleryBtn" aria-expanded="false" class="mt-8 btn-primary font-medium px-7 py-3.5 rounded-full shadow-soft inline-flex items-center gap-2">
+        <span id="galleryBtnLabel">View Past Outreaches</span>
+        <svg id="galleryChevron" class="h-4 w-4 transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+    </div>
+
+    <!-- Gallery grid: replace each placeholder image src below with real photos as they become available -->
+    <div id="galleryWrap" class="gallery-wrap mt-14">
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-01.jpg" alt="Pre-operative consultation during a Conclusion Eye Care outreach" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-02.jpg" alt="Conclusion Eye Care surgeon performing cataract surgery" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-03.jpg" alt="A patient with family after eye surgery during outreach" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-04.jpg" alt="Surgical team at work during the Gwoza, Borno outreach" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-05.jpg" alt="An elderly patient recovering after surgery in Gwoza, Borno" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-06.jpg" alt="Patients waiting to be attended to during the Gwoza outreach" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-07.jpg" alt="Surgical team performing an eye procedure in Gwoza, Borno" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-08.jpg" alt="Pre-screening consultation during the Gwoza outreach" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-09.jpg" alt="Patients prepared for surgery during the Katsina outreach" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-10.jpg" alt="A young patient after successful eye surgery in Katsina" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-11.jpg" alt="Patients receiving care during the Katsina outreach" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-12.jpg" alt="Patients recovering after surgery during the Katsina outreach" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-13.jpg" alt="Conclusion Eye Care community outreach photo 13" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-14.jpg" alt="Conclusion Eye Care community outreach photo 14" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-15.jpg" alt="Conclusion Eye Care community outreach photo 15" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-16.jpg" alt="Conclusion Eye Care community outreach photo 16" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-17.jpg" alt="Conclusion Eye Care community outreach photo 17" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-18.jpg" alt="Conclusion Eye Care community outreach photo 18" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-19.jpg" alt="Conclusion Eye Care community outreach photo 19" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-20.jpg" alt="Conclusion Eye Care community outreach photo 20" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-21.jpg" alt="Conclusion Eye Care community outreach photo 21" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-22.jpg" alt="Conclusion Eye Care community outreach photo 22" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-23.jpg" alt="Conclusion Eye Care community outreach photo 23" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-24.jpg" alt="Conclusion Eye Care community outreach photo 24" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-25.jpg" alt="Conclusion Eye Care community outreach photo 25" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-26.jpg" alt="Conclusion Eye Care community outreach photo 26" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-27.jpg" alt="Conclusion Eye Care community outreach photo 27" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-28.jpg" alt="Conclusion Eye Care community outreach photo 28" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-29.jpg" alt="Conclusion Eye Care community outreach photo 29" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-30.jpg" alt="Conclusion Eye Care community outreach photo 30" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-31.jpg" alt="Conclusion Eye Care community outreach photo 31" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-32.jpg" alt="Conclusion Eye Care community outreach photo 32" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-33.jpg" alt="Conclusion Eye Care community outreach photo 33" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-34.jpg" alt="Conclusion Eye Care community outreach photo 34" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-35.jpg" alt="Conclusion Eye Care community outreach photo 35" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-36.jpg" alt="Conclusion Eye Care community outreach photo 36" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-37.jpg" alt="Conclusion Eye Care community outreach photo 37" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-38.jpg" alt="Conclusion Eye Care community outreach photo 38" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-39.jpg" alt="Conclusion Eye Care community outreach photo 39" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-40.jpg" alt="Conclusion Eye Care community outreach photo 40" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-41.jpg" alt="Conclusion Eye Care community outreach photo 41" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-42.jpg" alt="Conclusion Eye Care community outreach photo 42" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-43.jpg" alt="Conclusion Eye Care community outreach photo 43" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-44.jpg" alt="Conclusion Eye Care community outreach photo 44" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-45.jpg" alt="Conclusion Eye Care community outreach photo 45" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-46.jpg" alt="Conclusion Eye Care community outreach photo 46" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-47.jpg" alt="Conclusion Eye Care community outreach photo 47" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-48.jpg" alt="Conclusion Eye Care community outreach photo 48" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-49.jpg" alt="Conclusion Eye Care community outreach photo 49" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-50.jpg" alt="Conclusion Eye Care community outreach photo 50" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-51.jpg" alt="Conclusion Eye Care community outreach photo 51" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-52.jpg" alt="Conclusion Eye Care community outreach photo 52" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-53.jpg" alt="Conclusion Eye Care community outreach photo 53" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-54.jpg" alt="Conclusion Eye Care community outreach photo 54" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-55.jpg" alt="Conclusion Eye Care community outreach photo 55" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-56.jpg" alt="Conclusion Eye Care community outreach photo 56" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-57.jpg" alt="Conclusion Eye Care community outreach photo 57" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-58.jpg" alt="Conclusion Eye Care community outreach photo 58" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-59.jpg" alt="Conclusion Eye Care community outreach photo 59" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-60.jpg" alt="Conclusion Eye Care community outreach photo 60" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-61.jpg" alt="Conclusion Eye Care community outreach photo 61" class="tile-img w-full h-full object-cover" />
+        </div>
+        <div class="tile rounded-2xl overflow-hidden shadow-card bg-white aspect-[4/3]">
+          <img src="assets/outreach/outreach-62.jpg" alt="Conclusion Eye Care community outreach photo 62" class="tile-img w-full h-full object-cover" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GET IN TOUCH -->
+<section id="contact" class="relative py-20 sm:py-28 bg-deepdark overflow-hidden">
+  <div class="absolute inset-0 noise opacity-30"></div>
+  <div class="absolute -left-32 -top-20 w-96 h-96 rounded-full bg-primary/20 blur-3xl"></div>
+  <div class="absolute -right-20 bottom-0 w-72 h-72 rounded-full bg-eyeblue/15 blur-3xl"></div>
+
+  <div class="relative max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl mx-auto text-center fade-up">
+      <span class="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white text-xs font-medium tracking-wide px-4 py-2 rounded-full">Get In Touch</span>
+      <h2 class="font-display font-bold text-3xl sm:text-4xl tracking-[-0.02em] text-white mt-4">Let's Get You Booked</h2>
+      <p class="mt-5 text-white/70 leading-[1.7]">Better Vision. Better Life. Tell us what you need, or reach us directly — our team responds quickly.</p>
+    </div>
+
+    <div class="mt-14 grid lg:grid-cols-[1.15fr_0.85fr] gap-6">
+
+      <!-- Quote form -->
+      <form id="quoteForm" class="fade-up bg-white rounded-[1.75rem] shadow-lift p-7 sm:p-10">
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label class="block text-sm font-medium text-ink/80 mb-1.5" for="qf-name">Full Name</label>
+            <input id="qf-name" name="name" type="text" required placeholder="Your full name" class="w-full rounded-xl border border-sage bg-sage/20 px-4 py-3 text-sm text-ink placeholder:text-ink/40 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-ink/80 mb-1.5" for="qf-phone">Phone Number</label>
+            <input id="qf-phone" name="phone" type="tel" required placeholder="e.g. 0803 449 7735" class="w-full rounded-xl border border-sage bg-sage/20 px-4 py-3 text-sm text-ink placeholder:text-ink/40 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition" />
+          </div>
+        </div>
+
+        <div class="mt-5">
+          <label class="block text-sm font-medium text-ink/80 mb-1.5" for="qf-email">Email Address</label>
+          <input id="qf-email" name="email" type="email" placeholder="you@example.com" class="w-full rounded-xl border border-sage bg-sage/20 px-4 py-3 text-sm text-ink placeholder:text-ink/40 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition" />
+        </div>
+
+        <div class="mt-5">
+          <label class="block text-sm font-medium text-ink/80 mb-1.5" for="qf-service">Service Needed</label>
+          <select id="qf-service" name="service" required class="w-full rounded-xl border border-sage bg-sage/20 px-4 py-3 text-sm text-ink focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition">
+            <option value="" disabled selected>Select a service</option>
+            <option>Comprehensive Eye Exam</option>
+            <option>Glasses &amp; Frames</option>
+            <option>Contact Lens Fitting</option>
+            <option>Eye Surgery &amp; Surgical Care</option>
+            <option>Retina &amp; Diabetic Eye Care</option>
+            <option>Community Outreach / Donation</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="mt-5">
+          <label class="block text-sm font-medium text-ink/80 mb-1.5" for="qf-message">Message</label>
+          <textarea id="qf-message" name="message" rows="4" placeholder="Tell us a bit more..." class="w-full rounded-xl border border-sage bg-sage/20 px-4 py-3 text-sm text-ink placeholder:text-ink/40 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition resize-none"></textarea>
+        </div>
+
+        <button id="qfSubmitBtn" type="submit" class="tap btn-primary w-full sm:w-auto mt-7 font-medium px-8 py-3.5 rounded-full shadow-soft inline-flex items-center justify-center gap-2 disabled:opacity-60">
+          <span id="qfSubmitLabel">Request My Free Quote</span>
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </button>
+        <p class="text-xs text-ink/50 mt-3">Your request goes straight to our inbox — we'll get back to you shortly.</p>
+        <p id="qfStatus" class="hidden text-sm font-medium mt-3"></p>
+      </form>
+
+      <!-- Direct contact -->
+      <div class="flex flex-col gap-5">
+        <div class="fade-up relative bg-gradient-to-br from-primary to-deep rounded-[1.75rem] p-7 sm:p-8 text-white overflow-hidden">
+          <div class="absolute inset-0 noise opacity-30"></div>
+          <div class="relative">
+            <h3 class="font-display font-semibold text-xl">Prefer to talk now?</h3>
+            <p class="text-white/85 text-sm mt-2 leading-relaxed">Call us directly or message us on WhatsApp — our team is ready to help.</p>
+            <button id="callUsBtn" type="button" class="tap btn-white mt-6 font-medium px-6 py-3.5 rounded-full shadow-soft inline-flex items-center justify-center gap-2 w-full sm:w-auto">
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c0 8.3 6.7 15 15 15l3-4-5.5-2-2 2c-2-1-4-3-5-5l2-2-2-5.5z"/></svg>
+              Call Us
+            </button>
+          </div>
+        </div>
+
+        <div class="fade-up bg-white rounded-[1.75rem] p-7 sm:p-8">
+          <ul class="space-y-5 text-sm text-ink/75">
+            <li class="flex items-start gap-3.5">
+              <span class="h-10 w-10 rounded-full bg-sage text-deep flex items-center justify-center shrink-0">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 5.5-8 12-8 12s-8-6.5-8-12a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="2.8"/></svg>
+              </span>
+              <span class="pt-2">17 Gwani Street, Kabo House, Wuse Zone 4, Abuja FCT</span>
+            </li>
+            <li class="flex items-center gap-3.5">
+              <span class="h-10 w-10 rounded-full bg-sage text-deep flex items-center justify-center shrink-0">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c0 8.3 6.7 15 15 15l3-4-5.5-2-2 2c-2-1-4-3-5-5l2-2-2-5.5z"/></svg>
+              </span>
+              <span class="flex flex-col">
+                <a href="tel:+2348034497735" class="hover:text-deep transition">+234 803 449 7735</a>
+                <a href="tel:+2348055550899" class="hover:text-deep transition">+234 805 555 0899</a>
+              </span>
+            </li>
+            <li class="flex items-center gap-3.5">
+              <span class="h-10 w-10 rounded-full bg-sage text-deep flex items-center justify-center shrink-0">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5L12 13l8.5-6.5"/></svg>
+              </span>
+              <a href="mailto:info@conclusioneyecare.com" class="hover:text-deep transition">info@conclusioneyecare.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALL / WHATSAPP MODAL -->
+<div id="callModalBackdrop" class="modal-backdrop fixed inset-0 z-[60] bg-ink/60 backdrop-blur-sm flex items-center justify-center p-5">
+  <div id="callModalPanel" class="modal-panel bg-white rounded-[1.75rem] shadow-lift w-full max-w-sm p-7 relative">
+    <button id="callModalClose" type="button" aria-label="Close" class="tap absolute top-4 right-4 h-9 w-9 rounded-full bg-sage/60 hover:bg-sage flex items-center justify-center text-deep transition">
+      <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+
+    <div id="callViewMain" class="modal-view">
+      <h3 class="font-display font-semibold text-xl text-ink pr-8">How would you like to reach us?</h3>
+      <div class="mt-6 flex flex-col gap-3">
+        <button type="button" data-view="call" class="tap call-option w-full flex items-center gap-3 border border-sage rounded-xl px-5 py-4 hover:border-primary hover:bg-sage/30 transition text-left">
+          <span class="h-10 w-10 rounded-full bg-sage text-deep flex items-center justify-center shrink-0">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c0 8.3 6.7 15 15 15l3-4-5.5-2-2 2c-2-1-4-3-5-5l2-2-2-5.5z"/></svg>
+          </span>
+          <span>
+            <span class="block font-medium text-ink">Call Us</span>
+            <span class="block text-xs text-ink/55">Speak with our team directly</span>
+          </span>
+        </button>
+        <button type="button" data-view="whatsapp" class="tap call-option w-full flex items-center gap-3 border border-sage rounded-xl px-5 py-4 hover:border-primary hover:bg-sage/30 transition text-left">
+          <span class="h-10 w-10 rounded-full bg-sage text-deep flex items-center justify-center shrink-0">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5A9.5 9.5 0 0 0 3.6 16.8L2.5 21.5l4.8-1.3A9.5 9.5 0 1 0 12 2.5zm0 17.2a7.6 7.6 0 0 1-3.9-1.1l-.3-.2-2.7.7.7-2.6-.2-.3A7.7 7.7 0 1 1 12 19.7zm4.3-5.7c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1-1.2-.6-2-1.1-2.8-2.4-.1-.2-.1-.4 0-.5l.5-.6c.1-.2.1-.4 0-.5l-.6-1.4c-.1-.3-.4-.3-.6-.3h-.5c-.2 0-.5.1-.6.3-.2.2-.7.8-.7 1.8 0 1.1.8 2.1 1 2.3.1.2 1.7 2.7 4.3 3.7 2.1.8 2.5.6 3-.1.4-.5.5-1 .4-1.5z"/></svg>
+          </span>
+          <span>
+            <span class="block font-medium text-ink">Message on WhatsApp</span>
+            <span class="block text-xs text-ink/55">Chat with us instantly</span>
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <div id="callViewCall" class="modal-view hidden">
+      <button type="button" data-back class="tap inline-flex items-center gap-1.5 text-sm text-ink/60 hover:text-deep transition mb-4">
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        Back
+      </button>
+      <h3 class="font-display font-semibold text-xl text-ink">Choose a number to call</h3>
+      <div class="mt-6 flex flex-col gap-3">
+        <a href="tel:+2348034497735" class="tap w-full flex items-center justify-between border border-sage rounded-xl px-5 py-4 hover:border-primary hover:bg-sage/30 transition">
+          <span class="font-medium text-ink">+234 803 449 7735</span>
+          <svg class="h-4 w-4 text-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="tel:+2348055550899" class="tap w-full flex items-center justify-between border border-sage rounded-xl px-5 py-4 hover:border-primary hover:bg-sage/30 transition">
+          <span class="font-medium text-ink">+234 805 555 0899</span>
+          <svg class="h-4 w-4 text-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div id="callViewWhatsapp" class="modal-view hidden">
+      <button type="button" data-back class="tap inline-flex items-center gap-1.5 text-sm text-ink/60 hover:text-deep transition mb-4">
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        Back
+      </button>
+      <h3 class="font-display font-semibold text-xl text-ink">Choose a number to message</h3>
+      <div class="mt-6 flex flex-col gap-3">
+        <a href="https://wa.me/2348034497735" target="_blank" rel="noopener" class="tap w-full flex items-center justify-between border border-sage rounded-xl px-5 py-4 hover:border-primary hover:bg-sage/30 transition">
+          <span class="font-medium text-ink">+234 803 449 7735</span>
+          <svg class="h-4 w-4 text-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="https://wa.me/2348055550899" target="_blank" rel="noopener" class="tap w-full flex items-center justify-between border border-sage rounded-xl px-5 py-4 hover:border-primary hover:bg-sage/30 transition">
+          <span class="font-medium text-ink">+234 805 555 0899</span>
+          <svg class="h-4 w-4 text-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DONATE / BANK TRANSFER MODAL -->
+<div id="donateModalBackdrop" class="modal-backdrop fixed inset-0 z-[60] bg-ink/60 backdrop-blur-sm flex items-center justify-center p-5">
+  <div id="donateModalPanel" class="modal-panel bg-white rounded-[1.75rem] shadow-lift w-full max-w-sm p-7 relative">
+    <button id="donateModalClose" type="button" aria-label="Close" class="tap absolute top-4 right-4 h-9 w-9 rounded-full bg-sage/60 hover:bg-sage flex items-center justify-center text-deep transition">
+      <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+
+    <div id="donateViewMain" class="modal-view">
+      <span class="h-12 w-12 rounded-full bg-sage text-deep flex items-center justify-center">
+        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.6s-7.4-4.6-9.6-9.1C1 8.7 2.4 5.6 5.4 4.8c2-.6 3.8.2 4.9 1.7l1.7 2.2 1.7-2.2c1.1-1.5 2.9-2.3 4.9-1.7 3 .8 4.4 3.9 3 6.7-2.2 4.5-9.6 9.1-9.6 9.1z"/></svg>
+      </span>
+      <h3 class="font-display font-semibold text-xl text-ink pr-8 mt-4">How would you like to donate?</h3>
+      <p class="text-sm text-ink/60 mt-1.5">Thank you for supporting our outreach programs. Choose a currency to see transfer details.</p>
+
+      <div class="mt-6 flex flex-col gap-3">
+        <button type="button" data-view="NGN" class="tap donate-option w-full flex items-center gap-3 border border-sage rounded-xl px-5 py-4 hover:border-primary hover:bg-sage/30 transition text-left">
+          <span class="h-10 w-10 rounded-full bg-sage text-deep flex items-center justify-center shrink-0 text-lg">🇳🇬</span>
+          <span>
+            <span class="block font-medium text-ink">Nigerian Naira</span>
+            <span class="block text-xs text-ink/55">NGN account</span>
+          </span>
+        </button>
+        <button type="button" data-view="USD" class="tap donate-option w-full flex items-center gap-3 border border-sage rounded-xl px-5 py-4 hover:border-primary hover:bg-sage/30 transition text-left">
+          <span class="h-10 w-10 rounded-full bg-sage text-deep flex items-center justify-center shrink-0 text-lg">🇺🇸</span>
+          <span>
+            <span class="block font-medium text-ink">US Dollar</span>
+            <span class="block text-xs text-ink/55">USD account</span>
+          </span>
+        </button>
+        <button type="button" data-view="GBP" class="tap donate-option w-full flex items-center gap-3 border border-sage rounded-xl px-5 py-4 hover:border-primary hover:bg-sage/30 transition text-left">
+          <span class="h-10 w-10 rounded-full bg-sage text-deep flex items-center justify-center shrink-0 text-lg">🇬🇧</span>
+          <span>
+            <span class="block font-medium text-ink">British Pound</span>
+            <span class="block text-xs text-ink/55">GBP account</span>
+          </span>
+        </button>
+        <button type="button" data-view="EUR" class="tap donate-option w-full flex items-center gap-3 border border-sage rounded-xl px-5 py-4 hover:border-primary hover:bg-sage/30 transition text-left">
+          <span class="h-10 w-10 rounded-full bg-sage text-deep flex items-center justify-center shrink-0 text-lg">🇪🇺</span>
+          <span>
+            <span class="block font-medium text-ink">Euro</span>
+            <span class="block text-xs text-ink/55">EUR account</span>
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <div id="donateViewNGN" class="modal-view hidden">
+      <button type="button" data-back class="tap inline-flex items-center gap-1.5 text-sm text-ink/60 hover:text-deep transition mb-4">
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        Back
+      </button>
+      <h3 class="font-display font-semibold text-xl text-ink">🇳🇬 Naira (NGN) Account</h3>
+      <div class="mt-6 space-y-3">
+        <div class="border border-sage rounded-xl px-4 py-3">
+          <p class="text-xs text-ink/50">Bank Name</p>
+          <p class="font-medium text-ink">Guaranty Trust Bank</p>
+        </div>
+        <div class="border border-sage rounded-xl px-4 py-3">
+          <p class="text-xs text-ink/50">Account Name</p>
+          <p class="font-medium text-ink">Conclusion Eye Care Ltd.</p>
+        </div>
+        <div class="border border-sage rounded-xl px-4 py-3 flex items-center justify-between gap-3">
+          <div>
+            <p class="text-xs text-ink/50">Account Number</p>
+            <p class="font-medium text-ink" id="donateAccountNumberNGN">0762578448</p>
+          </div>
+          <button type="button" data-copy-target="donateAccountNumberNGN" class="tap copy-account-btn text-xs font-medium text-deep bg-sage hover:bg-sage/70 rounded-full px-3.5 py-2 transition shrink-0">Copy</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="donateViewUSD" class="modal-view hidden">
+      <button type="button" data-back class="tap inline-flex items-center gap-1.5 text-sm text-ink/60 hover:text-deep transition mb-4">
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        Back
+      </button>
+      <h3 class="font-display font-semibold text-xl text-ink">🇺🇸 US Dollar (USD) Account</h3>
+      <div class="mt-6 space-y-3">
+        <div class="border border-sage rounded-xl px-4 py-3">
+          <p class="text-xs text-ink/50">Bank Name</p>
+          <p class="font-medium text-ink">Guaranty Trust Bank</p>
+        </div>
+        <div class="border border-sage rounded-xl px-4 py-3">
+          <p class="text-xs text-ink/50">Account Name</p>
+          <p class="font-medium text-ink">Conclusion Eye Care Ltd.</p>
+        </div>
+        <div class="border border-sage rounded-xl px-4 py-3 flex items-center justify-between gap-3">
+          <div>
+            <p class="text-xs text-ink/50">Account Number</p>
+            <p class="font-medium text-ink" id="donateAccountNumberUSD">0793159461</p>
+          </div>
+          <button type="button" data-copy-target="donateAccountNumberUSD" class="tap copy-account-btn text-xs font-medium text-deep bg-sage hover:bg-sage/70 rounded-full px-3.5 py-2 transition shrink-0">Copy</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="donateViewGBP" class="modal-view hidden">
+      <button type="button" data-back class="tap inline-flex items-center gap-1.5 text-sm text-ink/60 hover:text-deep transition mb-4">
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        Back
+      </button>
+      <h3 class="font-display font-semibold text-xl text-ink">🇬🇧 British Pound (GBP) Account</h3>
+      <div class="mt-6 space-y-3">
+        <div class="border border-sage rounded-xl px-4 py-3">
+          <p class="text-xs text-ink/50">Bank Name</p>
+          <p class="font-medium text-ink">Guaranty Trust Bank</p>
+        </div>
+        <div class="border border-sage rounded-xl px-4 py-3">
+          <p class="text-xs text-ink/50">Account Name</p>
+          <p class="font-medium text-ink">Conclusion Eye Care Ltd.</p>
+        </div>
+        <div class="border border-sage rounded-xl px-4 py-3 flex items-center justify-between gap-3">
+          <div>
+            <p class="text-xs text-ink/50">Account Number</p>
+            <p class="font-medium text-ink" id="donateAccountNumberGBP">0793159478</p>
+          </div>
+          <button type="button" data-copy-target="donateAccountNumberGBP" class="tap copy-account-btn text-xs font-medium text-deep bg-sage hover:bg-sage/70 rounded-full px-3.5 py-2 transition shrink-0">Copy</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="donateViewEUR" class="modal-view hidden">
+      <button type="button" data-back class="tap inline-flex items-center gap-1.5 text-sm text-ink/60 hover:text-deep transition mb-4">
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        Back
+      </button>
+      <h3 class="font-display font-semibold text-xl text-ink">🇪🇺 Euro (EUR) Account</h3>
+      <div class="mt-6 space-y-3">
+        <div class="border border-sage rounded-xl px-4 py-3">
+          <p class="text-xs text-ink/50">Bank Name</p>
+          <p class="font-medium text-ink">Guaranty Trust Bank</p>
+        </div>
+        <div class="border border-sage rounded-xl px-4 py-3">
+          <p class="text-xs text-ink/50">Account Name</p>
+          <p class="font-medium text-ink">Conclusion Eye Care Ltd.</p>
+        </div>
+        <div class="border border-sage rounded-xl px-4 py-3 flex items-center justify-between gap-3">
+          <div>
+            <p class="text-xs text-ink/50">Account Number</p>
+            <p class="font-medium text-ink" id="donateAccountNumberEUR">0793159485</p>
+          </div>
+          <button type="button" data-copy-target="donateAccountNumberEUR" class="tap copy-account-btn text-xs font-medium text-deep bg-sage hover:bg-sage/70 rounded-full px-3.5 py-2 transition shrink-0">Copy</button>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-xs text-ink/45 mt-5">Prefer WhatsApp? <a href="https://wa.me/2348034497735?text=Hello%2C%20I%27d%20like%20to%20make%20a%20donation" target="_blank" rel="noopener" class="text-deep font-medium underline">Send us a message</a> and we'll guide you through.</p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="bg-deep text-white pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div>
+        <div class="flex items-center gap-3">
+          <img src="assets/logo.png" alt="Conclusion Eye Care Limited logo" class="h-12 w-auto object-contain" />
+          <span class="font-display font-bold text-sm leading-tight">CONCLUSION<br /><span class="font-medium text-white/70 text-[11px] tracking-[0.18em]">EYE CARE LIMITED</span></span>
+        </div>
+        <p class="text-white/65 text-sm mt-5 leading-relaxed max-w-xs">Precision. Compassion. Excellence. Protecting vision and improving quality of life across our community.</p>
+        <div class="flex items-center gap-3 mt-6">
+          <a href="#" aria-label="Facebook" class="tap h-9 w-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 9H15V6.5h-1.8c-2 0-3.2 1.3-3.2 3.3V11H8v2.5h2v7h2.6v-7h2l.4-2.5h-2.4V9.9c0-.6.3-.9.9-.9z"/></svg></a>
+          <a href="#" aria-label="Instagram" class="tap h-9 w-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.8" cy="7.2" r="0.9" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://wa.me/2348034497735" target="_blank" rel="noopener" aria-label="WhatsApp" class="tap h-9 w-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5A9.5 9.5 0 0 0 3.6 16.8L2.5 21.5l4.8-1.3A9.5 9.5 0 1 0 12 2.5zm0 17.2a7.6 7.6 0 0 1-3.9-1.1l-.3-.2-2.7.7.7-2.6-.2-.3A7.7 7.7 0 1 1 12 19.7zm4.3-5.7c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1-1.2-.6-2-1.1-2.8-2.4-.1-.2-.1-.4 0-.5l.5-.6c.1-.2.1-.4 0-.5l-.6-1.4c-.1-.3-.4-.3-.6-.3h-.5c-.2 0-.5.1-.6.3-.2.2-.7.8-.7 1.8 0 1.1.8 2.1 1 2.3.1.2 1.7 2.7 4.3 3.7 2.1.8 2.5.6 3-.1.4-.5.5-1 .4-1.5z"/></svg></a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="font-display font-semibold text-sm tracking-wide uppercase text-white/80">Quick Links</h4>
+        <ul class="mt-5 space-y-3 text-sm text-white/70">
+          <li><a href="#about" class="hover:text-white transition">About Us</a></li>
+          <li><a href="#services" class="hover:text-white transition">Our Services</a></li>
+          <li><a href="#ceo" class="hover:text-white transition">CEO's Message</a></li>
+          <li><a href="#donate" class="hover:text-white transition">Donate</a></li>
+          <li><a href="#experiences" class="hover:text-white transition">Past Experiences</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-display font-semibold text-sm tracking-wide uppercase text-white/80">Services</h4>
+        <ul class="mt-5 space-y-3 text-sm text-white/70">
+          <li>Comprehensive Eye Exams</li>
+          <li>Glasses &amp; Frames</li>
+          <li>Contact Lens Fitting</li>
+          <li>Eye Surgery</li>
+          <li>Retina &amp; Diabetic Care</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-display font-semibold text-sm tracking-wide uppercase text-white/80">Contact</h4>
+        <ul class="mt-5 space-y-3.5 text-sm text-white/70">
+          <li class="flex items-start gap-3">
+            <svg class="h-5 w-5 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 5.5-8 12-8 12s-8-6.5-8-12a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="2.8"/></svg>
+            <span>17 Gwani Street, Kabo House, Wuse Zone 4, Abuja FCT</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="h-5 w-5 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c0 8.3 6.7 15 15 15l3-4-5.5-2-2 2c-2-1-4-3-5-5l2-2-2-5.5z"/></svg>
+            <span class="flex flex-col gap-1">
+              <a href="tel:+2348034497735" class="hover:text-white transition">+234 803 449 7735</a>
+              <a href="tel:+2348055550899" class="hover:text-white transition">+234 805 555 0899</a>
+            </span>
+          </li>
+          <li class="flex items-center gap-3">
+            <svg class="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5L12 13l8.5-6.5"/></svg>
+            <a href="mailto:info@conclusioneyecare.com" class="hover:text-white transition">info@conclusioneyecare.com</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-white/15 mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/60">
+      <p>&copy; 2026 Conclusion Eye Care Limited. RC:1957742. All rights reserved.</p>
+      <p>Precision. Compassion. Excellence.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+  document.querySelectorAll('.fade-up').forEach(el => revealObserver.observe(el));
+
+  const menuBtn = document.getElementById('menuBtn');
+  const mobilePanel = document.getElementById('mobilePanel');
+  const iconMenu = document.getElementById('iconMenu');
+  const iconClose = document.getElementById('iconClose');
+
+  menuBtn.addEventListener('click', () => {
+    const isOpen = mobilePanel.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', String(isOpen));
+    iconMenu.classList.toggle('hidden', isOpen);
+    iconClose.classList.toggle('hidden', !isOpen);
+  });
+
+  mobilePanel.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobilePanel.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      iconMenu.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+    });
+  });
+
+  const galleryBtn = document.getElementById('galleryBtn');
+  const galleryWrap = document.getElementById('galleryWrap');
+  const galleryLabel = document.getElementById('galleryBtnLabel');
+  const galleryChevron = document.getElementById('galleryChevron');
+
+  galleryBtn.addEventListener('click', () => {
+    const isOpen = galleryWrap.classList.toggle('open');
+    galleryBtn.setAttribute('aria-expanded', String(isOpen));
+    galleryLabel.textContent = isOpen ? 'Hide Past Outreaches' : 'View Past Outreaches';
+    galleryChevron.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+    if (isOpen) {
+      galleryWrap.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  });
+
+  // Call Us / WhatsApp modal
+  const callModalBackdrop = document.getElementById('callModalBackdrop');
+  const callModalClose = document.getElementById('callModalClose');
+  const callUsBtn = document.getElementById('callUsBtn');
+  const callViews = {
+    main: document.getElementById('callViewMain'),
+    call: document.getElementById('callViewCall'),
+    whatsapp: document.getElementById('callViewWhatsapp'),
+  };
+
+  function showCallView(name) {
+    Object.values(callViews).forEach(v => v.classList.add('hidden'));
+    callViews[name].classList.remove('hidden');
+  }
+
+  function openCallModal() {
+    showCallView('main');
+    callModalBackdrop.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeCallModal() {
+    callModalBackdrop.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  callUsBtn.addEventListener('click', openCallModal);
+  callModalClose.addEventListener('click', closeCallModal);
+  callModalBackdrop.addEventListener('click', (e) => {
+    if (e.target === callModalBackdrop) closeCallModal();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeCallModal();
+  });
+  callModalBackdrop.querySelectorAll('.call-option').forEach(btn => {
+    btn.addEventListener('click', () => showCallView(btn.dataset.view));
+  });
+  callModalBackdrop.querySelectorAll('[data-back]').forEach(btn => {
+    btn.addEventListener('click', () => showCallView('main'));
+  });
+
+  // Quote form -> send straight to email via FormSubmit
+  const quoteForm = document.getElementById('quoteForm');
+  const qfSubmitBtn = document.getElementById('qfSubmitBtn');
+  const qfSubmitLabel = document.getElementById('qfSubmitLabel');
+  const qfStatus = document.getElementById('qfStatus');
+
+  quoteForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('qf-name').value.trim();
+    const phone = document.getElementById('qf-phone').value.trim();
+    const email = document.getElementById('qf-email').value.trim();
+    const service = document.getElementById('qf-service').value;
+    const message = document.getElementById('qf-message').value.trim();
+
+    qfSubmitBtn.disabled = true;
+    qfSubmitLabel.textContent = 'Sending...';
+    qfStatus.className = 'hidden text-sm font-medium mt-3';
+
+    fetch('https://formsubmit.co/ajax/info@conclusioneyecare.com', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        _subject: 'New Quote Request - Conclusion Eye Care',
+        _template: 'table',
+        _captcha: 'false',
+        Name: name,
+        Phone: phone,
+        Email: email || 'Not provided',
+        'Service Needed': service,
+        Message: message || 'Not provided',
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success !== 'true') throw new Error(data.message || 'Request failed');
+        qfStatus.textContent = "Thanks! Your request has been sent — we'll be in touch shortly.";
+        qfStatus.className = 'text-sm font-medium mt-3 text-deep';
+        quoteForm.reset();
+      })
+      .catch(() => {
+        qfStatus.textContent = 'Something went wrong. Please call or WhatsApp us at +234 803 449 7735.';
+        qfStatus.className = 'text-sm font-medium mt-3 text-red-600';
+      })
+      .finally(() => {
+        qfSubmitBtn.disabled = false;
+        qfSubmitLabel.textContent = 'Request My Free Quote';
+      });
+  });
+
+  // Donate / bank transfer modal
+  const donateBtn = document.getElementById('donateBtn');
+  const donateModalBackdrop = document.getElementById('donateModalBackdrop');
+  const donateModalClose = document.getElementById('donateModalClose');
+  const donateViews = {
+    main: document.getElementById('donateViewMain'),
+    NGN: document.getElementById('donateViewNGN'),
+    USD: document.getElementById('donateViewUSD'),
+    GBP: document.getElementById('donateViewGBP'),
+    EUR: document.getElementById('donateViewEUR'),
+  };
+
+  function showDonateView(name) {
+    Object.values(donateViews).forEach(v => v.classList.add('hidden'));
+    donateViews[name].classList.remove('hidden');
+  }
+
+  function openDonateModal() {
+    showDonateView('main');
+    donateModalBackdrop.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeDonateModal() {
+    donateModalBackdrop.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  donateBtn.addEventListener('click', openDonateModal);
+  donateModalClose.addEventListener('click', closeDonateModal);
+  donateModalBackdrop.addEventListener('click', (e) => {
+    if (e.target === donateModalBackdrop) closeDonateModal();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeDonateModal();
+  });
+  donateModalBackdrop.querySelectorAll('.donate-option').forEach(btn => {
+    btn.addEventListener('click', () => showDonateView(btn.dataset.view));
+  });
+  donateModalBackdrop.querySelectorAll('[data-back]').forEach(btn => {
+    btn.addEventListener('click', () => showDonateView('main'));
+  });
+
+  donateModalBackdrop.querySelectorAll('.copy-account-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = document.getElementById(btn.dataset.copyTarget);
+      navigator.clipboard.writeText(target.textContent.trim());
+      const original = btn.textContent;
+      btn.textContent = 'Copied!';
+      setTimeout(() => { btn.textContent = original; }, 1500);
+    });
+  });
+</script>
+</body>
+</html>
