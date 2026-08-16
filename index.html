@@ -57,7 +57,7 @@
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  #about, #services, #ceo, #experiences, #contact { scroll-margin-top: 5rem; }
+  #about, #services, #ceo, #experiences, #faq, #contact { scroll-margin-top: 5rem; }
   body { font-family: 'Inter', sans-serif; color: #333333; }
   h1, h2, h3, .font-display { font-family: 'Sora', sans-serif; }
 
@@ -215,6 +215,12 @@
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
   }
+
+  .faq-item summary { list-style: none; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item .faq-icon { transition: transform 0.3s ease; }
+  .faq-item[open] .faq-icon { transform: rotate(135deg); }
+  .faq-item[open] summary .faq-q { color: #1F7A63; }
 </style>
 <script type="application/ld+json">
 {
@@ -264,6 +270,49 @@
   }
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need an appointment, or can I walk in?",
+      "acceptedAnswer": { "@type": "Answer", "text": "We welcome walk-ins, but booking ahead through our quote form or WhatsApp helps us reduce your wait time and ensure the right specialist is available for your visit." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you accept HMO or insurance plans?",
+      "acceptedAnswer": { "@type": "Answer", "text": "We work with a number of HMO and insurance plans. Contact our team with your provider's details before your visit and we'll confirm your coverage." }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a comprehensive eye exam take?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A standard exam typically takes 30 to 45 minutes, depending on the tests needed. Surgical consultations and specialized screenings may take a little longer." }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I bring to my first appointment?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Please bring a valid ID, any current glasses or contact lenses, a list of medications you're taking, and your HMO details if applicable." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you treat children as well as adults?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our team provides eye care for patients of all ages, from a child's first eye exam to complex surgical care for our elders." }
+    },
+    {
+      "@type": "Question",
+      "name": "What safety and hygiene protocols do you follow?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Patient safety is a core value for us. We follow strict infection control and evidence-based protocols across every consultation, screening and procedure." }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I book a consultation?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Fill out our quote form, call us directly, or message us on WhatsApp. Our team responds quickly and will help you find a time that works." }
+    }
+  ]
+}
+</script>
 </head>
 <body class="bg-white antialiased">
 
@@ -284,6 +333,7 @@
       <a href="#services" class="nav-link">Services</a>
       <a href="#ceo" class="nav-link">CEO's Message</a>
       <a href="#experiences" class="nav-link">Past Experiences</a>
+      <a href="#faq" class="nav-link">FAQ</a>
       <a href="#contact" class="nav-link">Contact</a>
     </nav>
 
@@ -305,6 +355,7 @@
     <a href="#services" class="py-1.5">Services</a>
     <a href="#ceo" class="py-1.5">CEO's Message</a>
     <a href="#experiences" class="py-1.5">Past Experiences</a>
+    <a href="#faq" class="py-1.5">FAQ</a>
     <a href="#contact" class="py-1.5">Contact</a>
     <a href="#contact" class="btn-primary text-center font-medium text-sm px-5 py-3 rounded-full shadow-soft mt-1">Book Appointment</a>
   </div>
@@ -869,6 +920,93 @@
   </div>
 </section>
 
+<!-- FAQ -->
+<section id="faq" class="py-20 sm:py-28 bg-white">
+  <div class="max-w-3xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl mx-auto text-center fade-up">
+      <span class="text-primary font-semibold text-sm tracking-wide uppercase">Got Questions?</span>
+      <h2 class="font-display font-bold text-3xl sm:text-4xl tracking-[-0.02em] text-ink mt-3">Frequently Asked Questions</h2>
+      <p class="mt-5 text-ink/70 leading-[1.7]">Answers to the questions we hear most from patients. Can't find what you're looking for? Reach out and we'll be happy to help.</p>
+    </div>
+
+    <div class="mt-14 fade-up">
+      <details class="faq-item border-b border-sage py-5" open>
+        <summary class="flex items-center justify-between gap-4 cursor-pointer">
+          <span class="faq-q font-display font-semibold text-base sm:text-lg text-ink">Do I need an appointment, or can I walk in?</span>
+          <span class="faq-icon shrink-0 h-8 w-8 rounded-full bg-sage text-deep flex items-center justify-center">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </summary>
+        <p class="mt-3 text-sm sm:text-[15px] text-ink/65 leading-relaxed pr-12">We welcome walk-ins, but booking ahead through our quote form or WhatsApp helps us reduce your wait time and ensure the right specialist is available for your visit.</p>
+      </details>
+
+      <details class="faq-item border-b border-sage py-5">
+        <summary class="flex items-center justify-between gap-4 cursor-pointer">
+          <span class="faq-q font-display font-semibold text-base sm:text-lg text-ink">Do you accept HMO or insurance plans?</span>
+          <span class="faq-icon shrink-0 h-8 w-8 rounded-full bg-sage text-deep flex items-center justify-center">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </summary>
+        <p class="mt-3 text-sm sm:text-[15px] text-ink/65 leading-relaxed pr-12">We work with a number of HMO and insurance plans. Contact our team with your provider's details before your visit and we'll confirm your coverage.</p>
+      </details>
+
+      <details class="faq-item border-b border-sage py-5">
+        <summary class="flex items-center justify-between gap-4 cursor-pointer">
+          <span class="faq-q font-display font-semibold text-base sm:text-lg text-ink">How long does a comprehensive eye exam take?</span>
+          <span class="faq-icon shrink-0 h-8 w-8 rounded-full bg-sage text-deep flex items-center justify-center">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </summary>
+        <p class="mt-3 text-sm sm:text-[15px] text-ink/65 leading-relaxed pr-12">A standard exam typically takes 30–45 minutes, depending on the tests needed. Surgical consultations and specialized screenings may take a little longer.</p>
+      </details>
+
+      <details class="faq-item border-b border-sage py-5">
+        <summary class="flex items-center justify-between gap-4 cursor-pointer">
+          <span class="faq-q font-display font-semibold text-base sm:text-lg text-ink">What should I bring to my first appointment?</span>
+          <span class="faq-icon shrink-0 h-8 w-8 rounded-full bg-sage text-deep flex items-center justify-center">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </summary>
+        <p class="mt-3 text-sm sm:text-[15px] text-ink/65 leading-relaxed pr-12">Please bring a valid ID, any current glasses or contact lenses, a list of medications you're taking, and your HMO details if applicable.</p>
+      </details>
+
+      <details class="faq-item border-b border-sage py-5">
+        <summary class="flex items-center justify-between gap-4 cursor-pointer">
+          <span class="faq-q font-display font-semibold text-base sm:text-lg text-ink">Do you treat children as well as adults?</span>
+          <span class="faq-icon shrink-0 h-8 w-8 rounded-full bg-sage text-deep flex items-center justify-center">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </summary>
+        <p class="mt-3 text-sm sm:text-[15px] text-ink/65 leading-relaxed pr-12">Yes. Our team provides eye care for patients of all ages, from a child's first eye exam to complex surgical care for our elders.</p>
+      </details>
+
+      <details class="faq-item border-b border-sage py-5">
+        <summary class="flex items-center justify-between gap-4 cursor-pointer">
+          <span class="faq-q font-display font-semibold text-base sm:text-lg text-ink">What safety and hygiene protocols do you follow?</span>
+          <span class="faq-icon shrink-0 h-8 w-8 rounded-full bg-sage text-deep flex items-center justify-center">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </summary>
+        <p class="mt-3 text-sm sm:text-[15px] text-ink/65 leading-relaxed pr-12">Patient safety is a core value for us. We follow strict infection control and evidence-based protocols across every consultation, screening and procedure.</p>
+      </details>
+
+      <details class="faq-item border-b border-sage py-5">
+        <summary class="flex items-center justify-between gap-4 cursor-pointer">
+          <span class="faq-q font-display font-semibold text-base sm:text-lg text-ink">How do I book a consultation?</span>
+          <span class="faq-icon shrink-0 h-8 w-8 rounded-full bg-sage text-deep flex items-center justify-center">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+          </span>
+        </summary>
+        <p class="mt-3 text-sm sm:text-[15px] text-ink/65 leading-relaxed pr-12">Fill out our quote form below, call us directly, or message us on WhatsApp — our team responds quickly and will help you find a time that works.</p>
+      </details>
+    </div>
+
+    <div class="mt-12 text-center fade-up">
+      <a href="#contact" class="btn-primary font-medium px-7 py-3.5 rounded-full shadow-soft inline-flex items-center gap-2">Still have questions? Contact us</a>
+    </div>
+  </div>
+</section>
+
 <!-- GET IN TOUCH -->
 <section id="contact" class="relative py-20 sm:py-28 bg-deepdark overflow-hidden">
   <div class="absolute inset-0 noise opacity-30"></div>
@@ -1068,6 +1206,7 @@
           <li><a href="#services" class="hover:text-white transition">Our Services</a></li>
           <li><a href="#ceo" class="hover:text-white transition">CEO's Message</a></li>
           <li><a href="#experiences" class="hover:text-white transition">Past Experiences</a></li>
+          <li><a href="#faq" class="hover:text-white transition">FAQ</a></li>
         </ul>
       </div>
 
